@@ -9,7 +9,6 @@
 #include <time.h>
 #include <unistd.h>
 #include <dos.h>
-#include <windows.h>
 
 using namespace std;
 using namespace	xmlw;
