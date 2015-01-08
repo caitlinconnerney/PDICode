@@ -5,10 +5,6 @@
 #include <string>
 #include <stdlib.h>
 #include "xmlwriter.h"
-#include <stdio.h>
-#include <time.h>
-#include <unistd.h>
-#include <dos.h>
 
 using namespace std;
 using namespace	xmlw;
@@ -35,12 +31,8 @@ int main(int argc, char *argv[])
 		printf("[Usage:] $program.exe output_file.xml \n ");
 	}
 	else {
-
-  Sleep(500);
   printf("output filename specified : %s\n",argv[1]);
-  Sleep(500);
   printf("-----------------------\n");
-  Sleep(500);
 
   // generate XML file from scratch
   ofstream f(argv[1]);
