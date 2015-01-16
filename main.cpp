@@ -20,25 +20,16 @@ void insertdata(XmlStream &x) {
     }
     myfile.close();
   }
-
-  else cout << "Unable to open file"; 
 }
 
-int main(int argc, char *argv[])
+int main()
 {
-	if (argc != 2)
-	{
-		printf("[Usage:] $program.exe output_file.xml \n ");
-	}
-	else {
-  printf("output filename specified : %s\n",argv[1]);
+  printf("hi\n");
   printf("-----------------------\n");
 
   // generate XML file from scratch
-  ofstream f(argv[1]);
+  ofstream f("output.xml");
   XmlStream xml(f);
-
-
 
   xml 
       << tag("blocks") 
@@ -71,9 +62,5 @@ int main(int argc, char *argv[])
 
       xml << endtag("block-definition"); // close all tags up to specified
 
-      printf("Generated file %s\n", argv[1]);
-
   return 0;
-
-  	}
 }
